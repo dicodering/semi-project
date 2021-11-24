@@ -481,16 +481,7 @@
 
 /* 메인 > 2) 에디터픽 */
 /* 에디터픽 슬라이드 li 일부 숨겨두기 (1페이지 제외) */
-/* #bcArticle .editor .editor-wrap .slide li:nth-child(2),
-#bcArticle .editor .editor-wrap .slide li:nth-child(3),
-#bcArticle .editor .editor-wrap .slide li:nth-child(4),
-#bcArticle .editor .editor-wrap .slide li:nth-child(5),
-#bcArticle .editor .editor-wrap .slide li:nth-child(6),
-#bcArticle .editor .editor-wrap .slide li:nth-child(7),
-#bcArticle .editor .editor-wrap .slide li:nth-child(8),
-#bcArticle .editor .editor-wrap .slide li:nth-child(9) {
-    display: none;
-} */
+
 #bcArticle .editor {
     overflow: hidden;
 }
@@ -715,14 +706,16 @@
     display: block;
 }
 /* 02) 에디터픽 > 페이지 버튼 > 흰색 버튼 */
-#bcArticle .editor .editor-page .no1 {
+/* #bcArticle .editor .editor-page */
+.no1 {
     /* 버튼 사이즈 */
     width: 13px;
     height: 12px;
     /* 좌우/상하 만큼 이동시켜서 보이게 함(width & height사이즈 만큼) */
     background-position: 0 1px;
 }
-#bcArticle .editor .editor-page .no2 {
+/* #bcArticle .editor .editor-page */
+.no2 {
     /* 버튼 사이즈 */
     width: 13px;
     height: 12px;
@@ -780,26 +773,22 @@
 }
 
 /* 02) 에디터픽 > 페이지 버튼 > 검은색 버튼 */
-#bcArticle .editor .editor-page .no1-b {
+/* #bcArticle .editor .editor-page .link-page */
+.no1-b {
     /* 버튼 사이즈 */
     width: 13px;
     height: 12px;
     /* 좌우/상하 만큼 이동시켜서 보이게 함(width & height사이즈 만큼) */
     background-position: 0 -10px;
 }
+
+/* #bcArticle .editor .editor-page .link-page  */
 .no2-b {
-    /* 버튼 사이즈 */
     width: 13px;
     height: 12px;
-    /* 좌우/상하 만큼 이동시켜서 보이게 함(width & height사이즈 만큼) */
     background-position: -20px -10px;
 }
-/* #bcArticle .editor .editor-page .no2-b {
-    width: 13px;
-    height: 12px;
-    background-position: -20px -10px;
-} */
-#bcArticle .editor .editor-page .no3-b {
+#bcArticle .editor .editor-page .link-page .no3-b {
     /* 버튼 사이즈 */
     width: 13px;
     height: 12px;
