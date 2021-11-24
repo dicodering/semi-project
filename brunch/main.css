@@ -540,6 +540,12 @@
     height: 100%;
 }
 
+/* type (1) */
+#first-img:hover {
+    transition: 0.3s;
+    background-color: rgba(0,0,0,0.2);
+}
+
 /* type - 3분할 (02, 05, 08) */
 #bcArticle .editor .editor-wrap .slide li .slide-pic .part-three {
     width: 33.3339%;
@@ -553,7 +559,8 @@
 
 /* type - 4분할 (06, 09) */
 #bcArticle .editor .editor-wrap .slide li .slide-pic .part-four-full {
-    width: 100%;
+    /* width: 100%; */
+    width: 940px;
     height: 50%;
 }
 #bcArticle .editor .editor-wrap .slide li .slide-pic .part-four-full a {
@@ -584,7 +591,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(37, 37, 37, 0.6);
 }
 .explain .explain-inner {
     display: table-cell;
@@ -593,9 +600,19 @@
     color: #fff;
 }
 .explain .explain-inner .ex-title {
-    font-size: 30px;
+    font-size: 28px;
     line-height: 1.3em;
+    font-weight: 100;
     font-family: 'Nanum Myeongjo', serif;
+    padding-bottom: 30px;
+}
+/* 추가 */
+.explain .explain-inner .ex-sub {
+    display: block;
+    padding-top: 9px;
+    line-height: 20px;
+    font-size: 13px;
+    font-weight: 100;
     padding-bottom: 30px;
 }
 .explain .explain-inner .ex-by .by-text {
@@ -1121,13 +1138,13 @@
 }
 #bcArticle .recommend .recom-list .recom-list-box li a .recom-title {
     width: 100%;
-    height: 50px;
-    padding: 20px 0;
     font-weight: 300;
     font-size: 16px;
-    line-height: 1.6;
+    line-height: 1.4;
     letter-spacing: -.025em;
     color: #000;
+    display: inline-block;
+    margin-top: 20px;
 }
 #bcArticle .recommend .recom-list .recom-list-box li a .recom-cont {
     display: block;
@@ -1138,6 +1155,10 @@
     line-height: 1.6;
     box-sizing: border-box;
     margin-bottom: 20px;
+    margin-top: 15px;
+}
+#bcArticle .recommend .recom-list .recom-list-box li a .recom-thumb {
+    width: 100%;
 }
 /* 마우스 오버 시, p태그에 언더라인 */
 #bcArticle .recommend .recom-list .recom-list-box li:hover > a > p {

@@ -16,13 +16,43 @@
     <script>
       $(function() {
         $('.swipe').slick({
-          
           autoplay: true,
           autoplaySpeed: 3000,
         });
-      });
-    </script>
 
+
+        $('.event-box').slick({
+          dots: true,
+          infinite: true,
+          slidesToShow: 4,
+          slidesToScroll: 4
+          });
+      });
+
+        // Family Site 버튼 클릭 실행
+        const site_btn = querySelector("#btn");
+        const site_list = getElementById("famsite");
+
+        site_btn.addEventListener('click', e => {
+            e.preventDefault();
+            if (site_list.style.display == 'none') {
+              site_list.style.display = 'block';
+            } else if (site_list.style.display == 'block'){
+              site_list.style.display = 'none';
+            }
+        });
+
+        // function myFunction() {
+        //   const site_list = getElementById("famsite");
+
+        //     if (site_list.style.display == 'none') {
+        //       site_list.style.display = 'block';
+        //     } else if (site_list.style.display == 'block'){
+        //       site_list.style.display = 'none';
+        //     }
+        // }
+
+    </script>
  
   </head>
   <body>
@@ -75,19 +105,65 @@
       <hr/>
       <!-- 로그인 바 -->
       <div class="top-menu">
-        <ul class="log-join clearfix">
-          <li><a href="#" class="log">LOGIN</a></li>
-          <li><a href="#" class="join">JOIN</a></li>
-        </ul>
-        <ul class="menu-btns clearfix">
-          <li><a href="#" class="menu-btn">FLAVOR OR THE MONTH</a></li>
-          <li><a href="#" class="menu-btn">MENU</a></li>
-          <li><a href="#" class="menu-btn">영양 성분 및 알레르기</a></li>
-          <li><a href="#" class="menu-btn">EVENT</a></li>
-          <li><a href="#" class="menu-btn">STORE</a></li>
-          <li><a href="#" class="menu-btn">ABOUT</a></li>
-        </ul>
-    </div>
+        <div class="top-menu-middle">
+          <div class="pulll">
+            <ul class="log-join clearfix">
+              <li><a href="#" class="log">LOGIN</a></li>
+              <li><a href="#" class="join">JOIN</a></li>
+            </ul>
+          </div>
+          <div class="menu-btns clearfix">
+            <div class="flavor-menu">
+              <span><a href="#" class="menu-btn">FLAVOR OR THE MONTH</a></span>
+            <span><a href="#" class="menu-btn">MENU</a></span>
+            <span><a href="#" class="menu-btn">영양 성분 및 알레르기</a></span>
+            <span><a href="#" class="menu-btn">EVENT</a></span>
+            <span><a href="#" class="menu-btn">STORE</a></span>
+            <span><a href="#" class="menu-btn">ABOUT</a></span>
+            </div>
+  
+            <div class="dropdown-content">
+              <ul>
+                <li><a href="#"><img src="cheesetree.png" alt="cheesetree"></a></li>
+              </ul>
+              <ul>
+                <li><a href="#">아이스크림</a></li>
+                <li><a href="#">아이스크림 케이크</a></li>
+                <li><a href="#">음료</a></li>
+                <li><a href="#">커피</a></li>
+                <li><a href="#">디저트</a></li>
+              </ul>
+              <ul class="left_in00">
+                <li><a href="#">아이스크림</a></li>
+                <li><a href="#">음료</a></li>
+                <li><a href="#">커피</a></li>
+              </ul>
+              <ul class="left_in01">
+                <li><a href="#">진행중이벤트</a></li>
+                <li><a href="#">당첨자발표</a></li>
+              </ul>
+              <ul class="left_in03">
+                <li><a href="#">매장찾기</a></li>
+                <li><a href="#">고객센터</a></li>
+                <li><a href="#">단체주문</a></li>
+              </ul>
+              <ul class="left_in03"> 
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">보도자료</a></li>
+                <li><a href="#">채용정보</a></li>
+                <li><a href="#">점포개설문의</a></li>
+                <li><a href="#">CONTACT US</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+            
     
     <!-- * 메인 사진들 -->
     <div class="top-banner">
@@ -96,7 +172,7 @@
       </a>
     </div>
 
-    <!-- * 슬라이드 부분 -->
+    <!-- * 메인 이미지 슬라이드 부분 -->
     <div class="swipe">
       <div><a href="#"><img src="img/banner-img01.jpg" alt="banner01"></a></div>
       <div><a href="#"><img src="img/banner-img02.png" alt="banner02"></a></div>
@@ -121,18 +197,6 @@
             </div>
           </a>
         </li>
-
-        <li class="deliver-list">
-          <a href="#">
-            <img src="img/deliverman.png" alt="deliverman" class="event-img"/>
-            <div class="event-text">
-              <img src="img/storeevent.gif" alt="storeevent" class="title-one"/>
-              <h6 class="title-two">배달의 민족에서 빠르게 주문하세요!</h6>
-              <p class="title-three">상시진행</p>
-            </div>
-          </a>
-        </li>
-
         <li class="deliver-list">
           <a href="#">
             <img src="img/yogiyo.png" alt="yogiyo" class="event-img"/>
@@ -143,7 +207,16 @@
             </div>
           </a>
         </li>
-
+        <li class="deliver-list">
+          <a href="#">
+            <img src="img/deliverman.png" alt="deliverman" class="event-img"/>
+            <div class="event-text">
+              <img src="img/storeevent.gif" alt="storeevent" class="title-one"/>
+              <h6 class="title-two">배달의 민족에서 빠르게 주문하세요!</h6>
+              <p class="title-three">상시진행</p>
+            </div>
+          </a>
+        </li>
         <li class="deliver-list">
           <a href="#">
             <img src="img/kakao.png" alt="kakao" class="event-img"/>
@@ -153,6 +226,67 @@
               <p class="title-three">상시진행</p>
             </div>
           </a>
+        </li>
+        <li class="deliver-list">
+          <a href="#">
+            <img src="img/deliverman.png" alt="deliverman" class="event-img"/>
+            <div class="event-text">
+              <img src="img/storeevent.gif" alt="storeevent" class="title-one"/>
+              <h6 class="title-two">배달의 민족에서 빠르게 주문하세요!</h6>
+              <p class="title-three">상시진행</p>
+            </div>
+          </a>
+        </li>
+        <li class="deliver-list">
+          <a href="#">
+            <img src="img/happyorder.png" alt="happydeliver" class="event-img"/>
+            <div class="event-text">
+              <img src="img/storeevent.gif" alt="storeevent" class="title-one"/>
+              <h6 class="title-two">해피오더 딜리버리로 간편하게 주문하세요!</h6>
+              <p class="title-three">상시진행</p>
+            </div>
+          </a>
+        </li>
+        <li class="deliver-list">
+          <a href="#">
+            <img src="img/kakao.png" alt="kakao" class="event-img"/>
+            <div class="event-text">
+              <img src="img/storeevent.gif" alt="storeevent" class="title-one"/>
+              <h6 class="title-two">요기요에서 손쉽게 주문하세요!</h6>
+              <p class="title-three">상시진행</p>
+            </div>
+          </a>
+        </li>
+        <li class="deliver-list">
+          <a href="#">
+            <img src="img/deliverman.png" alt="deliverman" class="event-img"/>
+            <div class="event-text">
+              <img src="img/storeevent.gif" alt="storeevent" class="title-one"/>
+              <h6 class="title-two">배달의 민족에서 빠르게 주문하세요!</h6>
+              <p class="title-three">상시진행</p>
+            </div>
+          </a>
+        </li>
+        <li class="deliver-list">
+          <a href="#">
+            <img src="img/kakao.png" alt="kakao" class="event-img"/>
+            <div class="event-text">
+              <img src="img/storeevent.gif" alt="storeevent" class="title-one"/>
+              <h6 class="title-two">요기요에서 손쉽게 주문하세요!</h6>
+              <p class="title-three">상시진행</p>
+            </div>
+          </a>
+        </li>
+        <li class="deliver-list">
+          <a href="#">
+            <img src="img/deliverman.png" alt="deliverman" class="event-img"/>
+            <div class="event-text">
+              <img src="img/storeevent.gif" alt="storeevent" class="title-one"/>
+              <h6 class="title-two">배달의 민족에서 빠르게 주문하세요!</h6>
+              <p class="title-three">상시진행</p>
+            </div>
+          </a>
+        </li>
       </ul>
     </div>
 
@@ -331,8 +465,8 @@
         </ul>
         <!-- 패밀리 사이트 -->
         <nav class="familysite">
-          <button type="button" class="">FAMILY SITE</button>
-          <ul>
+          <button type="button" class="btn" id="btn">FAMILY SITE</button>
+          <ul id="famsite" class="famsite">
             <li><a href="http://www.baskinschool.co.kr/" target="_blank">배스킨 스쿨</a></li>
             <li><a href="http://www.spc.co.kr/" target="_blank">SPC그룹사이트</a></li>
             <li><a href="http://www.spcmagazine.com/" target="_blank">SPC MAGAZINE</a></li>
@@ -364,8 +498,5 @@
       </div>
     </footer>
 
-
-    
-   script>
   </body>
 </html>
