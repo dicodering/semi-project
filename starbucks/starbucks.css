@@ -1,0 +1,774 @@
+@charset "utf-8";
+
+
+/*-- 공통 --*/
+body, html {
+    width: 100%;
+    margin: auto;
+}
+* {
+    margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	color: black;
+    font: 100%;
+}
+ul, li , a {
+    list-style: none;
+    text-decoration: none;
+}
+div {
+    display: block;
+  }
+
+
+/*--- TOP BAR ---*/
+.header {
+    background-color: #f6f5ef;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+}
+.topbar {
+    margin: auto;
+    width: 1100px;
+    height: 120px;
+}
+/* 메인 로고 */
+.middle_topbar {
+    display: flex;
+}
+.toplogo {
+    padding: 20px;
+}
+/**오른쪽 메뉴+*/
+.rightnav {
+    width: 1080px;
+} 
+/* 위 */
+.first_nav {
+    margin-right: 10px;
+}
+.ul1 {
+    padding-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+.ul1 .li1 {
+    padding-right: 25px;
+    font-size: 13px;
+    padding-top: 8px;
+}
+.ul1 a {
+    color: #6e6d79;
+}
+.search_img {
+    background-color: white
+    ;
+    padding: 4.5px;
+    border-radius: 10%;
+    border: 1px solid #bfbfc9;
+}
+.li1:hover {
+    text-decoration: ;
+}
+
+
+/* 아래 서브메뉴는 submenu.css */
+
+
+/*-- 크리스마스 음료칸 --*/
+/* 리본 */
+.ribbon01 {
+   position: absolute;
+   padding-top: 498px;
+}
+.ribbon02{
+   position: absolute;
+   padding-left: 790px;
+   margin-top: -2px;
+}
+/* 크리스마스 음료소개 칸 */
+#chris_main {
+    background: #d1131d;
+    height: 650px;
+    padding-top: 120px;
+    width: 100%;
+    display: flex;
+}
+.main-drinks_wrap {
+    width: 1100px;
+    margin: auto;
+    height: 646px;
+}
+
+/* CARRY MERRY */
+.main-visual {
+    padding-top: 50px;
+    padding-left: 30px;
+    width: 335px;
+    height: 130px;
+    position: absolute;
+}
+
+/* 음료 세트*/
+.main-visual_set {
+    display: flex;
+    width: 700px;
+    height: 646px;
+    margin-left: 330px;
+ 
+}
+
+/* 토피넛 라떼 */
+.set_01 {
+    width: 160px;
+    height: 345px;
+    top: 220px;
+    position: relative;
+    transition-timing-function: linear;
+}
+/* 핑크 , 골큰, 콜드 */
+.set_02 {
+    width: 430px;
+    height: auto;
+    top: 30px;
+    margin-left: -10px;
+    position: relative;
+}
+/* 프라푸치노 */
+.set_03 {
+    width: 430px;
+    height: 400px;
+    top: 150px;
+    position: relative;
+}
+/* carry merry 밑에 자세히보기 버튼 */
+.btn_slogan {
+    position: relative;
+    width: 120px;
+    height: 23px;
+    text-align: center;
+    top: 220px;
+    left: 130px;
+    padding-top: 8px;
+    border-radius: 5px;
+    border: 2px solid white;
+    animation: delay 5px;
+}
+.btn_slogan > a {
+    color: white;
+}
+.btn_slogan:hover {
+    transition: background-color .7s, color .7s, border-color .7s;
+    text-decoration: underline;
+    border: 2px solid white;
+    background-color: rgba(255, 255, 255, 0.37);
+    color: white;
+}
+
+/** 오른쪽 상단 뱃지 **/
+.right_fixed {
+    position: absolute;
+    width: 0px;
+    position: fixed;
+    z-index: 3;
+}
+.badge_cont1 {
+    width: 140px;
+    margin: auto;
+    margin-left: 1130px;
+    padding-top: 15px;
+    z-index: 3;
+}
+.badge_cont2 {
+    margin: auto;
+    width: 140px;
+    margin-left: 1130px;
+}
+
+/*-- 공지사항 / 스타벅스 프로모션 --*/
+.line_notice {
+    position: relative;
+    height: 62px;
+    width: 100%;
+    
+}
+/* 공지사항 */
+.line_notice_left {
+    background-color: #111;
+    width: 50%;
+    height: 62px;
+    position: absolute; 
+}
+.line_notice_bg {
+    margin: auto;
+}
+.line_notice_bgl {
+    height: 62px;
+    width: 50%;    
+}
+.line_notice_inner {
+    height: 36px;
+    margin: auto;
+}
+.line_notice_inner_l {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 25px;
+    height: 36px;
+    padding-right: 90px;
+}
+.news_result a {
+    padding-left: 15px;
+    color: white;
+}
+.news_result a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+/* 스타벅스 프로모션 */
+.line_notice_right {
+    background-color: #f6f5ef;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 62px;
+    width: 50%;
+}
+.line_notice_bgr {
+    height: 62px;
+    margin: auto;
+}
+.line_notice_bgr a {
+    display: block;
+    position: relative;
+    padding-top: 22px;
+    padding-left: 110px;
+    font-size: 18px;
+    font-weight: 600;
+}
+.arrow_down01 {
+    margin-left: 243px;
+    margin-top: -52px;
+}
+/* 스타벅스 프로모션 이벤트 칸 */
+.main_prom_bnr {
+    margin: auto;
+    
+}
+
+
+/*-- Starbucks Rewards --*/
+.rewards_conts p , h2 , strong {
+    color: white;
+    font-size: 17px;
+}
+.rewards_wrap {
+    background-color: #1e3932;
+    height: 207px;
+    width: 100%;
+}
+.rewards_inner {
+    width: 1100px;
+    margin: auto;
+    display: flex;
+}
+/* 스타벅스 리워드 로고  */
+.rewards_logo {
+    padding: 25px 0px 0px 60px;
+
+}
+.rewards_img {
+    width: 175px;
+}
+/* 리워드 텍스트 부분 윗칸 */
+.rewards_conts {
+    width: 820px;
+    height: 207px;
+    padding-left: 40px;
+}
+.info-cont_txt > h2 {
+    padding-top: 25px;
+    font-size: 26px;
+}
+.txtnbtn {
+    display: flex;
+    height: 45px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #bfbfc9;
+}
+.member {
+    height: 47px;
+    width: 440px;
+    margin-top: -10px;
+}
+.member p {
+    line-height: 1.4;
+    font-size: 17px;
+}
+.info-txt1 {
+    font-weight: normal;
+}
+/* 회원가입/로그인 버튼 */
+.btn-signin_group {
+    width: 180px;
+    height: 40px;
+    margin-left: 200px;
+    text-align: center;
+}
+.btn-signin_group button {
+    line-height: 36px;
+    padding-left: 18.5px;
+    padding-right: 18.5px;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 5px;
+}
+.btn-signin {
+    cursor: pointer;
+    background-color: #00704a;
+    border: 2px solid #00704a;
+}
+.btn-signin:hover {
+    text-decoration: underline;
+}
+.btn-signin_login {
+    margin-left: 9px;
+    background-color: transparent;
+    cursor: pointer;
+    border: 2px solid #fff;
+}
+.btn-signin_login:hover {
+    text-decoration: underline;
+}
+/* 리워드 텍스트 부분 밑 */
+.gift-cont {
+    padding-top: 15px;
+    width: 820px;
+    display: flex;
+}
+.gift-cont_txt {
+    width: 520px;
+}
+.gift-cont_txt p , .gift-cont_txt strong {
+    font-size: 14px;
+}
+/* e-Gift 선물하기 버튼  */
+.btn_egift {
+    width: 300px; 
+}
+.e-gift-btn {
+    background: transparent;
+    cursor: pointer;
+    float: right;
+    line-height: 34px;
+    padding-left: 28px;
+    padding-right: 28px;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 5px;
+    border: 2px solid #fff;
+}
+.e-gift-btn:hover{
+    text-decoration: underline;
+}
+.btn_egift::after {
+    clear: both;
+    display: block;
+    float: none;
+    content: '';
+}
+
+/*-- Red Blend Coffe --*/
+#blendbean_wrap {
+    background-image: url(img/pink_bg.jpeg);
+    height: 573px;
+    overflow: hidden;
+    position: relative;
+    background-size: 100% 100%;
+}
+/* 블렌드 원두 가루 이미지 */
+.blendbean_inner {
+    position: relative;
+    max-width: 1080px;
+    height: 100%;
+    margin: auto;
+    position: relative;
+    display: flex;
+    padding-top: 95px;
+    padding-left: 165px;
+}
+/* 크리스마스 블렌드 텍스트 이미지 */
+.bean_txt_box {
+    position: relative;
+    padding-left: 45px;
+    padding-top: 100px;
+
+}
+/* 블렌트 자세히보기 버튼  */
+.btn_bean_detail {
+    padding-top: 35px;
+}
+.btn_bean_detail a {
+    font-size: 100%;
+    text-decoration: none;
+    color: #000;
+    background: transparent;
+    line-height: 36px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 2px solid #000;
+    padding: 10px 28px;
+}
+.btn_bean_detail a:hover {
+    color: white;
+    text-decoration: underline;
+    border: 2px solid #453d3d;
+    background-color: #453d3d;
+    transition: background-color .8s, color .8s;
+}
+
+/*-- Green Reserve the merry --*/
+#goldstar {
+    background-image: url(img/green_reserve.jpg);
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    background-position: center;
+}
+.reserve_inner {
+    margin: auto;
+    height: 400px;
+    max-width: 1100px;
+
+}
+/* 텍스트 골드 이미지 */
+.reserve_title {
+    padding-top: 140px;
+    padding-left: 20px;
+}
+/* 골드 자세히보기 버튼  */
+.reserve_detail-btn {
+    padding-left: 380px;
+}
+.reserve_detail-btn > a {
+    display: block;
+    width: 125px;
+    height: 100%;
+    color: #d5a012;
+    font-size: 15px;
+    line-height: 34px;
+    text-align: center;
+    border: 2px solid #d5a012;
+    border-radius: 5px;
+}
+.reserve_detail-btn > a:hover {
+    transition: background-color .7s, color .7s, border-color .7s;
+    text-decoration: underline;
+    border: 2px solid #d5a012;
+    background-color: #d5a012;
+    color: white;
+}
+/*-- pick your favorite --*/
+#fav_wrap01 {
+    background-image: url(img/fav_prod_bg_new.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 800px;
+}
+.fav_wrap02 {
+    width: 1100px;
+    margin: auto;
+    height: 650px;
+    display: flex;
+    text-align: right;
+    padding-top: 150px;
+}
+/* 왼쪽 텍스트 이미지 & 버튼 */
+.fav_inner01 {
+    width: 500px;
+    padding-right: 40px;
+}
+.fav_txt01 {
+    padding-bottom: 40px;
+}
+.fav_txt02 {
+    padding-bottom: 40px;   
+}
+.fav_btn {
+    width: 110px;
+    height: 30px;
+    padding-left: 249px;
+}
+.fav_btn a {
+    color: #fff;
+    display: block;
+    font-size: 14px;
+    height: 100%;
+    line-height: 33px;
+    text-align: center;
+    width: 100%;
+    transition: background-color .7s, color .7s;
+    font-size: 15px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    background: transparent;
+}
+.fav_btn a:hover {
+    transition: background-color .7s, color .7s, border-color .7s;
+    text-decoration: underline;
+    border: 2px solid white;
+    background-color: white;
+    color: black;
+}
+/* 오른쪽 케이크 이미지  */
+.fav_img {
+    padding-left: 130px;
+}
+
+/*-- reserve magazine --*/
+.reserve_magazine_wrap {
+    background-image: url(img/magazine-_line.png);
+    width: 100%;
+    height: 400px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+.magazine_inner01 {
+    width: 1200px;
+    margin: auto;
+}
+.magazine_inner02 {
+    margin-top: 0;
+    height: 400px;
+    margin: auto;
+    display: flex;
+}
+/* 매거진 왼쪽 텍스트 이미지  */
+.magazine_title {
+    width: 590px;
+    margin: auto;
+    padding-left: 100px;
+    padding-top: 40px;
+}
+/* 매거진 자세히보기 버튼 */
+.btn_magazine  {
+    padding-left: 285px;
+    padding-top: 25px;
+}
+.btn_magazine a{
+    font-size: 100%;
+    text-decoration: none;
+    color: #000;
+    background: transparent;
+    cursor: pointer;
+    line-height: 39px;
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    border: 2px solid #000;
+    padding: 8px 20px;
+}
+.btn_magazine > a:hover {
+    transition: background-color .7s, color .7s, border-color .7s;
+    text-decoration: underline;
+    border: 2px solid black;
+    background-color: black;
+    color: white;
+}
+/* 매거진 오른쪽 이미지  */
+.magazine_visual {
+    width: 100px;
+    margin: auto;
+    padding-right: 300px;
+    padding-bottom: 20px;
+}
+
+/*-- Find Store --*/
+#storeWrap {
+    background-image: url(img/store_bg.jpeg);
+    height: 400px;
+    width: 100%;
+    margin: auto;
+}
+.wrap_inner {
+    height: 400px;
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    overflow: hidden;
+}
+/* 왼쪽 이미지 2개 */
+.store01 {
+    width: 600px;
+    height: 400px;
+    margin: auto;
+    position: relative;
+}
+.store_img01 {
+    padding-left: 80px;
+}
+.store_img02 {
+    position:absolute;
+    margin-left: 300px;
+    bottom: 10px;
+    position: absolute;
+}
+/* 오른쪽 텍스트 이미지&버튼&가게이미지  */
+.store02 {
+    width: 500px;
+    padding-top: 110px;
+}
+/*매장찾기 버튼*/
+.store_btn {
+    padding-top: 25px;
+}
+.store_btn a {
+    font-size: 100%;
+    text-decoration: none;
+    color: #000;
+    background: transparent;
+    cursor: pointer;
+    line-height: 39px;
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    border: 2px solid #000;
+    padding: 6px 25px;
+}
+.store_btn > a:hover {
+    transition: background-color .7s, color .7s, border-color .7s;
+    text-decoration: underline;
+    border: 2px solid black;
+    background-color: black;
+    color: white;
+}
+.smallstore {
+    padding-left: 270px;
+}
+/* 배경에 원두 이미지 */
+.coff_bean {
+    margin-left: -222px;
+    margin-top: -170px;
+}
+
+
+/*-- Footer --*/
+#footer {
+    width: 100%;
+    height: 515px;
+    background-color:#2C2A29;   
+    margin: auto;
+}
+.footer_wrap {
+    width: 1200px;
+    margin: auto;
+    height: 210px;
+}
+/* 스타벅스 소개 리스트 */
+.footer_list {
+    display: flex ;
+    margin: auto;
+}
+.footer_ttl {
+    margin: auto;
+    height: 180px;
+    padding-top: 30px;
+}
+.footer_ttl a {
+    color: white;
+    font-size: 13px;
+}
+.footer_ttl a:hover {
+    text-decoration: underline;
+}
+.footer_ttl li:first-child {
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+/* 수상내역 이미지들  */
+.footer_awards_wrap {
+    width: 100%;
+    margin: auto;
+    background-color:#282828;
+    height: 100px;
+}
+.footer_awards_wrap_inner {
+    height: 100px;
+    width: 1200px;
+    margin: auto;
+}
+.bx-wrapper {
+    display: flex;
+    padding-top: 15px;
+}
+.footer_awards_slider{
+    margin: auto;
+    display: flex;
+}
+
+/* copyright */
+.copyright {
+    width: 1200px;
+    height: 145px;
+    margin: auto;
+    color: #999;
+    font-size: 14px;
+    text-align: center;
+    padding-top: 30px;    
+}
+/* 리스트 */
+.copyright .copylist {
+    border-left: 1px solid #393939;
+    color: #ccc;
+    font-size: 12px; 
+    padding: 0 10px;
+}
+.copylist:hover {
+    text-decoration: underline;
+}
+/* 개인정보처리방침 만 */
+.copyright .copylist:first-child {
+    border: none;
+    color: #00b050;
+    font-weight: bold;
+}
+/* 버튼  */
+.foot_btncon {
+    padding-top: 10px;
+}
+.btned_link {
+    font-size: 100%;
+    text-decoration: none;
+    color: white;
+    background: transparent;
+    cursor: pointer;
+    line-height: 39px;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 6px 25px;
+}
+.btned_link:hover {
+    text-decoration: underline;
+}
+/* 회사정보 */
+.copy_menu {
+    display: flex;
+    padding-left: 250px;
+}   
+.copy_menu li {
+    padding: 10px;
+}
+.copyright li , span {
+    color: #999;
+    font-size: 12px;
+}
