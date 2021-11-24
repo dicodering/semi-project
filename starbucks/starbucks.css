@@ -70,8 +70,8 @@ div {
     border-radius: 10%;
     border: 1px solid #bfbfc9;
 }
-.li1:hover {
-    text-decoration: ;
+.li1 a:hover {
+    text-decoration: underline;
 }
 
 
