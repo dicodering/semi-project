@@ -94,9 +94,12 @@ html, body {
 }
 
 /* 상단바 */
+.top {
+    background-image: url(./img/banner-bg.gif);
+}
 .top-bar {
     position: relative;
-    width: 1200px;
+    /* width: 1200px; */
     height: 130px;
     margin: 0 auto;
 }

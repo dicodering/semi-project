@@ -719,23 +719,25 @@
                             <dt class="notice_ttl">
                                 <img src="img/notice_ttl.png" alt="공지사항" >
                             </dt>
-                            <dd>
-                                <!--공지사항 내용 바꿈-->
-                                <ul class="news_result">
-                                    <li id="bannerList">
-                                        <a href="#" id="bannerLink">2021 플래너 쿠폰 3종 유효 기간 연장 안내</a>
-                                    </li>
-                                    <!-- <li style="display: none;">
-                                        <a href="#">시스템 개선 및 점검 안내</a>
-                                    </li>
-                                    <li style="display: none;">
-                                        <a href="#">[채용] 스타벅스커피 코리아 바리스타 채용 안내 </a>
-                                    </li>
-                                    <li style="display: none;">
-                                        <a href="#">사이렌 오더 주문 건수 제한 안내(11/2~12/31)</a>
-                                    </li> -->
-                                </ul>
-                            </dd>
+                            <div class="content">
+                                <div class="content__container">
+                                    <!--공지사항 내용 바꿈-->
+                                    <ul class="news_result content__container__list">
+                                        <li class="content__container__list__item">
+                                            <a href="#" id="bannerLink">2021 플래너 쿠폰 3종 유효 기간 연장 안내</a>
+                                        </li>
+                                        <li class="content__container__list__item">
+                                            <a href="#">시스템 개선 및 점검 안내</a>
+                                        </li>
+                                        <li class="content__container__list__item">
+                                            <a href="#">[채용] 스타벅스커피 코리아 바리스타 채용 안내 </a>
+                                        </li>
+                                        <li class="content__container__list__item">
+                                            <a href="#">사이렌 오더 주문 건수 제한 안내(11/2~12/31)</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>>
                         </dl>
                     </div>
                 </div>
@@ -1108,6 +1110,31 @@
 
     
     <script>
+        // 출력할 공지사항 경로들
+      const noteList = ["2021 플래너 쿠폰 3조 유효 기간 연장 안내", "시스템 개선 및 점검", "[채용] 스타벅스커피 코리아 바리스타 채용 안내"];
+    
+
+      // 현재 출력하고 있는 이미지의 인덱스
+      let currentIndex = 0;
+
+      setInterval(() => {
+        document
+          .querySelector("#bannerLink")
+          .setAttribute("a", noteList[currentIndex]);
+        document
+          .querySelector("#bannerList")
+          .setAttribute("href", hrefList[currentIndex]);
+
+        // currentIndex++;
+        // if (currentIndex > imgList.length) {
+        //     currentIndex= 0;
+        // }
+        currentIndex = (currentIndex + 1) % noteList.length;
+      }, 3000);
+
+
+
+
         /** 프로모션 클릭해서 사라지고 열고 **/
         function doDisplay(){
 	        var con = document.getElementById("promotion");
@@ -1117,6 +1144,7 @@
 		    con.style.display = 'none';
 	        }
         }
+
     </script>
 </body>
 </html>
