@@ -14,3 +14,24 @@
               site_btn.classList.add('off');
             }
         });
+
+        // dropdown btn 마우스
+        const menu_bar = document.querySelector(".top-menu");
+        const down_hover = document.querySelector(".mover");
+
+        down_hover.addEventListener('mouseover', e => {
+          e.preventDefault();
+          down_hover.style.display = 'block';
+        });
+
+        menu_bar.addEventListener('mouseover', e => {
+            e.preventDefault();
+              down_hover.style.display = 'block';
+        });
+
+        menu_bar.addEventListener('mouseout', e => {
+          e.preventDefault();
+            down_hover.style.display = 'none';
+        })
+         
+

@@ -141,13 +141,14 @@ html, body {
     color: #4a3d39;
 }
 
-/*------------------------------------*/
+/*--------------------------*/
+
 /* 로그인 바 */
 .top-menu {
    width: 100%;
    height: 46px;
    border-bottom: 0.5px solid rgba(0, 0, 0, 0.562);
-   
+   position: relative;
 }
 .top-menu-middle {
     width: 1200px;
@@ -171,7 +172,6 @@ html, body {
     font-weight: 800;
     font-size: 12px;
 }
-
 .top-menu li .join {
     color: #777;
     font-weight: 800;
@@ -181,56 +181,71 @@ html, body {
 /**************************/
 .flavor-menu {
     padding-top: 14px;
-    margin-right: -120px;
+    margin-right: -110px;
     font-weight: 800;
 }
 .flavor-menu span {
     padding-left: 40px;
-    padding-right: 55px;
+    padding-right: 50px;
+   
 }
 .flavor-menu a {
     color: rgb(46, 28, 21);
     font-size: 14px;
-  
 }
-
 .menu-btn {
     padding-bottom: 14px;
 }
+/* 영양성분 메뉴만 다르게 */
+.flavor-menu .allergy {
+    margin-right: -20px;
+    margin-left: -20px;
+}
 
-
-
-
-
-/* 로그인 바 > 각 메뉴 */
+/*-- 로그인 바 > 각 메뉴 --*/
 .menu-btns {
     position: relative;
     margin: auto;
     display: flex;
 }
-.dropdown-content {
-    display: none;
+/* hover 메뉴박스 */
+.drop-wrap {
+    width: 100%;
     position: absolute;
     background-color: #f9f9f9;
-    width: 1450px;
-    margin-top: 46px;
-    /* 수정 margin-left: -235px; */
-    margin-left: -310px;
+    /* width: 1213px; */
+    width: 100%;
+    margin-top: 13px;
+    /* margin-left: -223px; */
     height: 274px;
     z-index: 1;
     border-top: 0.5px solid black;
-    border-radius: 5px;
+    border-radius: 10px;
+    transition: 0.5s ease-in-out;
+}
+.dropdown-content {
+    height: inherit;
+    width: 1200px;
+    margin: 0 auto;
+}
+.mover {
+    display: none;
 }
 .dropdown-content ul {
     float: left;
-    margin-right: 60px;
     text-align: center;
     padding-top: 40px;
 }
+.dropdown-content ul::after {
+    content: '';
+    float: none;
+    display: block;
+    clear: both;
+}
 .dropdown-content ul img {
-    margin-left: 150px;
-    margin-right: 60px;
+    margin-left: 130px;
     margin-top: -40px;
+    margin-right: 50px;
 }
 .dropdown-content ul a {
     color: rgb(170, 166, 166);
@@ -242,49 +257,34 @@ html, body {
 }
 .dropdown-content ul li {
     margin-bottom: 15px;
-    margin-right: 20px;
 }
-.dropdown-content ul::after {
-    content: '';
-    float: none;
-    display: block;
-    clear: both;
-}
-.left_in00 {
-    margin-left: 15px;
-}
+/* 리스트 하나하나 마진적용 */
 .left_in01 {
-    margin-left: 25px;
+   margin-left: 94px;
 }
 .left_in02 {
-    padding-left: 70px;
+    margin-left: 66px;
 }
 .left_in03 {
-    margin-left: -7px;
+    margin-left: 84px;
+}
+.left_in04 {
+    margin-left: 68px;
+}
+.left_in05 {
+    margin-left: 65px;
 }
 .menu-btns:hover .dropdown-content {
     display: block;    
-    transition: 0.5s ease-in-out;
 }
-/* 안에 리스트들 */
 
 
-
-
-
-
-
-
-/**************************************/
-/* 메인 사진들 */
+/*-- 메인 사진들 --*/
 .top-banner img {
     width: 100%;
 }
 .swipe img {
     width: 100%;
-}
-.swipe .swipe-banner {
-
 }
 .swipe .swipe-banner li:nth-child(1) {
     display: block;
@@ -293,17 +293,51 @@ html, body {
 .swipe .swipe-banner li{
     display: none;
 }
-.swipe .swipe-banner li a {
-    
-}
 
 
-/* 이벤트 */
+/*-- 이벤트 --*/
 .name {
     text-align: center;
     padding: 60px 0;
 }
+.event-img img {
+    width: 288px;
+}
+.event-box .deliver-list {
+    box-sizing: border-box;
+    margin-left: 15px;
+}
+.event-box .deliver-list:first-child {
+    margin: 0px;
+}
+/* 이벤트 > 링크 태그 */
+.event-box .deliver-list a {
+    display: block;
+}
+.event-box .deliver-list .event-img {
+    width: 100%;
+}
 
+/*-- 이벤트 > 텍스트 --*/
+.event-box .deliver-list .event-text {
+    margin-top: 15px;
+    width: 100%;
+}
+.event-box .deliver-list .event-text h6 {
+    color: rgb(46, 28, 21);
+    font-size: 16px;
+    font-weight: 500;
+    padding: 6px 0;
+    word-spacing: -1.6px;
+}
+.event-box .deliver-list .event-text p {
+    color: rgb(46, 28, 21);
+    color: #777;
+    font-size: 13px;
+    font-weight: 300;
+    padding: 6px 0;
+    word-spacing: -1.6px;
+}
 /* 이벤트 점 버튼으로 슬라이드  */
 .event button.slick-prev {
     left: 0;
@@ -335,51 +369,12 @@ html, body {
     border-radius: 50%;
     border: none
 }
+/* 이벤트 점 눌렀을때 색 적용 */
 .slick-dots .slick-active button {
     background-color: black;
 }
-/**/
-.event-img img {
-    width: 288px;
-}
-.event-box .deliver-list {
-    box-sizing: border-box;
-    margin-left: 15px;
-}
-.event-box .deliver-list:first-child {
-    margin: 0px;
-}
 
-/* 이벤트 > 링크 태그 */
-.event-box .deliver-list a {
-    display: block;
-}
-.event-box .deliver-list .event-img {
-    width: 100%;
-}
-
-/* 이벤트 > 텍스트 */
-.event-box .deliver-list .event-text {
-    margin-top: 15px;
-    width: 100%;
-}
-.event-box .deliver-list .event-text h6 {
-    color: rgb(46, 28, 21);
-    font-size: 16px;
-    font-weight: 500;
-    padding: 6px 0;
-    word-spacing: -1.6px;
-}
-.event-box .deliver-list .event-text p {
-    color: rgb(46, 28, 21);
-    color: #777;
-    font-size: 13px;
-    font-weight: 300;
-    padding: 6px 0;
-    word-spacing: -1.6px;
-}
-
-/* BR MENU */
+/*-- BR MENU --*/
 .new-menu  {
     background-image: url(./img/scoop.jpg);
     background-attachment: cover;
@@ -620,9 +615,6 @@ html, body {
 .off {
     background: transparent url(./img/family_size_off.png) no-repeat 100% 0;
 }
-/* .foot .familysite .on + ul {
-    display: block;
-} */
 
 /* 하단 > 두번째 라인 > 버튼 안에 들어갈 내용 */
 .foot .familysite ul {
