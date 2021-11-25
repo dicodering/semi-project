@@ -300,7 +300,14 @@ div {
       -webkit-transform: translate3d(0, -25%, 0);
               transform: translate3d(0, -25%, 0);
     }
-  }
+}
+/* 플러스 버튼 */
+.plusbtn {
+    width: 37px;
+    position: absolute;
+    margin-left: 25px;
+    margin-top: -12px;
+}
 
 /* 스타벅스 프로모션 */
 .line_notice_right {
@@ -319,7 +326,7 @@ div {
     display: block;
     position: relative;
     padding-top: 22px;
-    padding-left: 110px;
+    padding-left: 150px;
     font-size: 18px;
     font-weight: 600;
 }
@@ -330,8 +337,8 @@ div {
 /* 스타벅스 프로모션 이벤트 칸 */
 .main_prom_bnr {
     margin: auto;
-    
 }
+
 /*-- Starbucks Rewards --*/
 .rewards_conts p , h2 , strong {
     color: white;
@@ -367,6 +374,7 @@ div {
 }
 .txtnbtn {
     display: flex;
+    width: 770px;
     height: 45px;
     padding-bottom: 10px;
     border-bottom: 1px solid #bfbfc9;
@@ -387,7 +395,7 @@ div {
 .btn-signin_group {
     width: 180px;
     height: 40px;
-    margin-left: 200px;
+    margin-left: 150px;
     text-align: center;
 }
 .btn-signin_group button {
@@ -429,7 +437,7 @@ div {
 }
 /* e-Gift 선물하기 버튼  */
 .btn_egift {
-    width: 300px; 
+    width: 250px; 
 }
 .e-gift-btn {
     background: transparent;

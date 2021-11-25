@@ -706,8 +706,9 @@
                     <div class="line_notice_bgr">
                     <a href="javascript:doDisplay();">
                     <p class="prom_ttl">스타벅스 프로모션</p></a>
-                    <a href="javascript:doDisplay();" class="arrow_down01">
-                        <img src="img/btn_down.png" alt="down-arrow">
+                    <a href="javascript:doDisplay();" class="arrow_down01 btnSearch">
+                        <img class="off_prom" id="off_prom" src="img/btn_down.png" alt="down-arrow">
+                        <img class="on_prom" id="on_prom" src="img/arrow-up.png" alt="down-arrow" style="display: none;">
                     </a>
                     
                 </div>
@@ -737,7 +738,8 @@
                                         </li>
                                     </ul>
                                 </div>
-                            </div>>
+                            </div>
+                            <a href="#"><img class="plusbtn" src="img/plus.png" alt="plusbtn"></a>
                         </dl>
                     </div>
                 </div>
@@ -1110,38 +1112,20 @@
 
     
     <script>
-        // 출력할 공지사항 경로들
-      const noteList = ["2021 플래너 쿠폰 3조 유효 기간 연장 안내", "시스템 개선 및 점검", "[채용] 스타벅스커피 코리아 바리스타 채용 안내"];
-    
-
-      // 현재 출력하고 있는 이미지의 인덱스
-      let currentIndex = 0;
-
-      setInterval(() => {
-        document
-          .querySelector("#bannerLink")
-          .setAttribute("a", noteList[currentIndex]);
-        document
-          .querySelector("#bannerList")
-          .setAttribute("href", hrefList[currentIndex]);
-
-        // currentIndex++;
-        // if (currentIndex > imgList.length) {
-        //     currentIndex= 0;
-        // }
-        currentIndex = (currentIndex + 1) % noteList.length;
-      }, 3000);
-
-
-
 
         /** 프로모션 클릭해서 사라지고 열고 **/
-        function doDisplay(){
+        function doDisplay() {
+            const off_prom = document.getElementById("off_prom");
+            const on_prom = document.getElementById("on_prom");
 	        var con = document.getElementById("promotion");
-	        if(con.style.display=='none'){
-		    con.style.display = 'block';
-	        }else{
-		    con.style.display = 'none';
+	        if (con.style.display == 'none') {
+                con.style.display = 'block';
+                off_prom.style.display = 'none';
+                on_prom.style.display = 'block';
+	        } else {
+                con.style.display = 'none';
+                off_prom.style.display = 'block';
+                on_prom.style.display = 'none';
 	        }
         }
 
