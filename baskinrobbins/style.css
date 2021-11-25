@@ -140,6 +140,17 @@ html, body {
     font-size: 11px;
     color: #4a3d39;
 }
+#btnSearch {
+    width: 54px;
+    height: 54px;
+    display: block;
+}
+.search-on {
+    background-image: url(./img/topiconright.png);
+}
+.search-off {
+    background-image: url(./img/btn_search_close.gif);
+}
 
 /*--------------------------*/
 
@@ -277,6 +288,126 @@ html, body {
 .menu-btns:hover .dropdown-content {
     display: block;    
 }
+
+/* 추가 ) 검색 버튼 누르면 hover 영역 */
+/* hover 메뉴박스 */
+.s-drop-wrap {
+    width: 100%;
+    position: absolute;
+    background-color: #f9f9f9;
+    /* width: 1213px; */
+    width: 100%;
+    height: 240px;
+    margin-top: 13px;
+    z-index: 1;
+    border-top: 0.5px solid black;
+    transition: 0.5s ease-in-out;
+}
+#searchMenu {
+    display: none;
+}
+.s-dropdown-content {
+    height: inherit;
+    width: 1200px;
+    margin: auto;
+    margin-top: 23px;
+}
+.s-dropdown-content ul {
+    padding-top: 15px;
+}
+.s-dropdown-content ul li {
+    float: left;
+}
+.s-dropdown-content ul li h4 {
+    color:rgb(46, 28, 21);
+    font-size: 14px;
+    font-weight: 300;
+    width: 100px;
+}
+/* 첫번째 영역 */
+.s-dropdown-content .s-first li {
+    display: flex;
+}
+.s-dropdown-content .s-first li:nth-child(2) {
+    margin-left: 30px;
+}
+.search_category {
+    border: 1px solid rgb(161, 161, 161);
+    padding: 4px;
+    border-radius: 5px;
+
+}
+.inline-1 {
+    width: 200px;
+    background-color:rgb(230, 230, 230);
+    border: none;
+    padding: 8px;
+    margin-left: 15px;
+}
+.inline-2 {
+    width: 450px;
+    background-color:rgb(230, 230, 230);
+    border: none;
+    padding: 8px;
+}
+.hash {
+    display: block;
+    padding-top: 8px;
+}
+.hash a {
+    color:rgb(238, 131, 153);
+    font-weight: 100;
+    margin-right: 6px;
+    font-size: 12px;
+}
+.hash span {
+    color:rgb(114, 114, 114);
+    font-weight: 100;
+    margin-right: 6px;
+    font-size: 12px;
+}
+
+/* 두번째 영역 */
+.allergie {
+    float: left;
+}
+.allergie-box {
+    float: left;
+    font-size: 14px;
+    font-weight: 300;
+}
+.s-dropdown-content .s-second li .allergie-box label {
+    /* padding: 2px; */
+    font-size: 13px;
+    padding: 5px;
+    display: inline-block;
+}
+.s-dropdown-content .s-second li h4 {
+    display: inline-block;
+}
+
+/* 세번째 영역 */
+.s-dropdown-content .s-third {
+    width: 100%;
+    text-align: center;
+}
+.s-dropdown-content .s-third li {
+    width: 1200px;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.s-dropdown-content .s-third li button {
+    width: 150px;
+    padding: 10px;
+    border-radius: 30px;
+    background-color:rgb(238, 131, 153);
+    color: #fff;
+    font-family: 'Nanum Gothic', sans serif;
+    border: none;
+    cursor: pointer;
+}
+
 
 
 /*-- 메인 사진들 --*/

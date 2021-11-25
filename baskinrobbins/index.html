@@ -57,7 +57,9 @@
       <ul class="top-right">
         <li><a href="#" class="top-right-contact">고객센터</a></li>
         <li><a href="#" class="top-right-contact">CONTACT US</a></li>
-        <li><a href="#" class="top-right-contact"><img src="img/topiconright.png" class="glasses" alt="glasses" /></a></li>
+        <li>
+          <a href="#" id="btnSearch" class="top-right-contact search-on"></a>
+        </li>
       </ul>
     </div>    
 
@@ -80,49 +82,143 @@
             <span><a href="#" class="menu-btn">STORE</a></span>
             <span><a href="#" class="menu-btn">ABOUT</a></span>
             </div>
-
-            
           </div>
         </div>
 
         <!-- 메뉴 리스트 박스 hover -->
         <div class="drop-wrap mover">
-        <div class="dropdown-content ">
-          <ul class="left_in00">
-            <li><a href="#"><img src="cheesetree.png" alt="cheesetree"></a></li>
-          </ul>
-          <ul class="left_in01">
-            <li><a href="#">아이스크림</a></li>
-            <li><a href="#">아이스크릠 케이크</a></li>
-            <li><a href="#">음료</a></li>
-            <li><a href="#">커피</a></li>
-            <li><a href="#">디저트</a></li>
-          </ul>
-          <ul class="left_in02">
-            <li><a href="#">아이스크림</a></li>
-            <li><a href="#">음료</a></li>
-            <li><a href="#">커피</a></li>
-          </ul>
-          <ul class="left_in03">
-            <li><a href="#">진행중이벤트</a></li>
-            <li><a href="#">당첨자발표</a></li>
-          </ul>
-          <ul class="left_in04">
-            <li><a href="#">매장찾기</a></li>
-            <li><a href="#">고객센터</a></li>
-            <li><a href="#">단체주문</a></li>
-          </ul>
-          <ul class="left_in05"> 
-            <li><a href="#">공지사항</a></li>
-            <li><a href="#">보도자료</a></li>
-            <li><a href="#">채용정보</a></li>
-            <li><a href="#">점포개설문의</a></li>
-            <li><a href="#">CONTACT US</a></li>
-          </ul>
+          <div class="dropdown-content">
+            <ul class="left_in00">
+              <li><a href="#"><img src="cheesetree.png" alt="cheesetree"></a></li>
+            </ul>
+            <ul class="left_in01">
+              <li><a href="#">아이스크림</a></li>
+              <li><a href="#">아이스크릠 케이크</a></li>
+              <li><a href="#">음료</a></li>
+              <li><a href="#">커피</a></li>
+              <li><a href="#">디저트</a></li>
+            </ul>
+            <ul class="left_in02">
+              <li><a href="#">아이스크림</a></li>
+              <li><a href="#">음료</a></li>
+              <li><a href="#">커피</a></li>
+            </ul>
+            <ul class="left_in03">
+              <li><a href="#">진행중이벤트</a></li>
+              <li><a href="#">당첨자발표</a></li>
+            </ul>
+            <ul class="left_in04">
+              <li><a href="#">매장찾기</a></li>
+              <li><a href="#">고객센터</a></li>
+              <li><a href="#">단체주문</a></li>
+            </ul>
+            <ul class="left_in05"> 
+              <li><a href="#">공지사항</a></li>
+              <li><a href="#">보도자료</a></li>
+              <li><a href="#">채용정보</a></li>
+              <li><a href="#">점포개설문의</a></li>
+              <li><a href="#">CONTACT US</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 추가 : 검색 버튼 클릭시 hover -->
+        <div id="searchMenu" class="s-drop-wrap"> <!-- mover-->
+          <div class="s-dropdown-content clearfix">
+              <!-- 첫번째 -->
+              <ul class="clearfix s-first">
+                <!-- 첫번째 > 제품명 -->
+                <li class="pull-left">
+                  <div class="allergie">
+                    <h4>제품명</h4>
+                  </div>
+                  <div class="allergie-box">
+                    <select name="ScTop" class="search_category">
+                      <option value="">전체</option>
+                          <option value="A">아이스크림</option>
+                          <option value="B">아이스크림케이크</option>
+                          <option value="C">음료</option>
+                          <option value="D">커피</option>
+                          <option value="E">디저트</option>
+                          <option value="F">block pack</option>
+                          <option value="G">ready pack</option>
+                    </select>
+                    <input type="text" id="S-Title" name="ScTitle" value="" title="제품명 입력" class="inline-1">
+                  </div>
+                </li>
+                <!-- 첫번째 > 해시태그 -->
+                <li class="pull-right">
+                    <div class="hashtag-1 allergie">
+                      <h4>해시태그</h4>
+                    </div>
+                    <div class="hashtag-2 allergie-box">
+                      <input type="text" id="S-Hashtag" name="ScHashtag" value="" class="inline-2 " placeholder="">
+                    
+                      <div class="hash">
+                        <span>자주 찾는 해시태그</span>
+                        <a href="#">#치즈나무숲</a>
+                        <a href="#">#치즈나무숲블라스트</a>
+                        <a href="#">#치즈나무숲아이스쿠키샌드</a>
+                      </div>
+                    </div>
+                </li>
+              </ul>
+              <!-- 두번째 -->
+              <ul class="s-second clearfix">
+                <li class="clearfix">
+                  <div class="allergie">
+                    <h4>알레르기 성분</h4>
+                  </div>
+                  <div class="allergie-box">
+                  <div class="allergie-1 label-box">
+                    <label>
+                        <input class="sr_only" type="checkbox" value="계란">
+                        <span>계란</span>
+                    </label>
+                    <label>
+                        <input class="sr_only" type="checkbox" value="대두">
+                        <span>대두</span>
+                    </label>
+                    <label>
+                        <input class="sr_only" type="checkbox" value="돼지고기">
+                        <span>돼지고기</span>
+                    </label>
+                    <label>
+                        <input class="sr_only" type="checkbox" value="땅콩">
+                        <span>땅콩</span>
+                    </label>
+                 </div>
+                 <div class="allergie-2 label-box">
+                    <label class="clear_label">
+                        <input class="sr_only" type="checkbox" value="밀">
+                        <span>밀</span>
+                    </label>
+                    <label>
+                        <input class="sr_only" type="checkbox" value="복숭아">
+                        <span>복숭아</span>
+                    </label>
+                    <label>
+                        <input class="sr_only" type="checkbox" value="우유">
+                        <span>우유</span>
+                    </label>
+                    <label>
+                        <input class="sr_only" type="checkbox" value="없음">
+                        <span>없음</span>
+                    </label>
+                  </div>
+                  </div>
+                </li>
+              </ul>
+              <!-- 세번째 -->
+              <ul class="submit s-third clearfix">
+                <li>
+                  <button type="submit">검색</button>
+                </li>
+              </ul>
+          </div>
         </div>
       </div>
-      </div>
-
+    
     <!-- * 메인 사진들 -->
     <div class="top-banner">
       <a href="#">

@@ -1,17 +1,18 @@
-        // Family Site 버튼 클릭 실행
-        const site_btn = document.getElementById("btnFam");
-        const site_list = document.getElementById("famsite");
+                
+        // Search 버튼 클릭 실행
+        const search_btn = document.getElementById("btnSearch");
+        const search_list = document.getElementById("searchMenu");
 
-        site_btn.addEventListener('click', e => {
+        search_btn.addEventListener('click', e => {
             // e.preventDefault();
-            if (site_list.style.display == 'none') {
-              site_btn.classList.remove('off');
-              site_btn.classList.add('on');
-              site_list.style.display = 'block';
+            if (search_list.style.display == 'none') {
+              search_btn.classList.remove('search-on');
+              search_btn.classList.add('search-off');
+              search_list.style.display = 'block';
             } else {
-              site_list.style.display = 'none';
-              site_btn.classList.remove('on');
-              site_btn.classList.add('off');
+              search_list.style.display = 'none';
+              search_btn.classList.remove('search-off');
+              search_btn.classList.add('search-on');
             }
         });
 
@@ -33,5 +34,22 @@
           e.preventDefault();
             down_hover.style.display = 'none';
         })
-         
+
+        
+        // Family Site 버튼 클릭 실행
+        const site_btn = document.getElementById("btnFam");
+        const site_list = document.getElementById("famsite");
+
+        site_btn.addEventListener('click', e => {
+            // e.preventDefault();
+            if (site_list.style.display == 'none') {
+              site_btn.classList.remove('off');
+              site_btn.classList.add('on');
+              site_list.style.display = 'block';
+            } else {
+              site_list.style.display = 'none';
+              site_btn.classList.remove('on');
+              site_btn.classList.add('off');
+            }
+        });
 
