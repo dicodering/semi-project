@@ -105,20 +105,23 @@
 }
 /* 헤더 > 가로 */
 .header {
-    max-width: 1500px;
-    padding: 8px 10px;
-    height: 60px;
+    /* max-width: 1500px; */
+    /* padding: 8px 10px; */
+    box-sizing: border-box;
+    height: 70px;
     /* 메뉴바 고정 */
     position: static;
     top: 0;
     z-index: 10000;
+    /* 추가 */
+    width: 100%;
 }
 
 /* JS 2번*/
 .header-content {
     width:100%;
-    padding: 8px 8px 8px 0px;
-    height: 60px;
+    /* padding: 8px 8px 8px 0px; */
+    height: 70px;
     background-color: rgba(255,255,255,0.8);
     border-bottom: 1px solid #ccc;
     transition: 0.3s linear 0.5s;
@@ -129,12 +132,13 @@
 }
 
 #bcHeader .header .header-top {
-    /* max-width: 1400px;
-    margin: 0 auto;
+    /* max-width: 1400px; */
+    /* margin: 0 auto;
     box-sizing: border-box;
     padding: 8px 10px; */
     position: relative;
-    width: 1400px;
+    /* width: 1400px; */
+    width: 100%;
     margin: auto;
     margin-top: 10px;
 }
@@ -149,6 +153,7 @@
     top: 0;
     left: 0;
     width: 120px;
+    padding-left: 15px;
 }
 
 /* 헤더 > 가로 > 왼쪽 - 버튼 이미지 */
@@ -198,6 +203,7 @@
     top: 0;
     right: 0;
     width: 120px;
+    padding-right: 15px;
 }
 #bcHeader .header-top .header-r a {
     border-radius: 30px;
@@ -855,12 +861,24 @@
     background-position: -160px -10px;
 }
 
-
+.middle-banner-wrap {
+    width: 100%;
+    overflow-x: auto;
+}
 
 /* 03) 키워드 */
 /* 공통(키워드, 브런치작가, 추천) - 텍스트 이미지 */
+#bcArticle .keyword .keyword_wrap {
+    width: 100%;
+    overflow-x: auto;
+}
 #bcArticle .keyword {
     padding-top: 150px;
+    /* 추가 */
+    width: 100%;
+    /* max-width: 940px;
+    min-width: 700px;
+    width: 940px; */
 }
 #bcArticle .title-text-img {
     background-image: url(./imgicon/txt_brunch_v6_20181017_rtn.png);
@@ -927,8 +945,10 @@
 #bcArticle .writer {
     margin-top: 150px;
     width: 100%;
-    height: 1150px;
     background-color: rgba(250,250,250);
+    /* 수정 */
+    padding-bottom: 30px;
+    height: 100%;
 }
 #bcArticle .writer .writer-text-box {
     padding-top: 100px;
@@ -1071,8 +1091,15 @@
 /* 05) 중단배너 */
 #bcArticle .middle-banner {
     display: block;
-    width: 940px;
+    max-width: 940px;
+    /* 수정 */
     margin: 97px auto 0;
+    /* margin: 0 auto; */
+}
+#bcArticle .middle-banner img {
+    width: 100%;
+    width: 940px;
+    margin: 0 auto;
 }
 
 /* 06) 추천 */

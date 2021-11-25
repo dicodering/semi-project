@@ -13,47 +13,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     
-    <script>
-      $(function() {
-        $('.swipe').slick({
-          autoplay: true,
-          autoplaySpeed: 3000,
-        });
-
-
-        $('.event-box').slick({
-          dots: true,
-          infinite: true,
-          slidesToShow: 4,
-          slidesToScroll: 4
-          });
-      });
-
-        // Family Site 버튼 클릭 실행
-        const site_btn = querySelector("#btn");
-        const site_list = getElementById("famsite");
-
-        site_btn.addEventListener('click', e => {
-            e.preventDefault();
-            if (site_list.style.display == 'none') {
-              site_list.style.display = 'block';
-            } else if (site_list.style.display == 'block'){
-              site_list.style.display = 'none';
-            }
-        });
-
-        // function myFunction() {
-        //   const site_list = getElementById("famsite");
-
-        //     if (site_list.style.display == 'none') {
-        //       site_list.style.display = 'block';
-        //     } else if (site_list.style.display == 'block'){
-        //       site_list.style.display = 'none';
-        //     }
-        // }
-
-    </script>
- 
   </head>
   <body>
     <!-- * 상단 바 -->
@@ -465,7 +424,9 @@
         </ul>
         <!-- 패밀리 사이트 -->
         <nav class="familysite">
-          <button type="button" class="btn" id="btn">FAMILY SITE</button>
+          <!-- (추가)  버튼 -->
+          <button type="button" class="btnFam off" id="btnFam">FAMILY SITE</button> <!-- onclick="myFunction();"  -->
+          <!-- <a href="#" id="btnFam">FAMILY</a> -->
           <ul id="famsite" class="famsite">
             <li><a href="http://www.baskinschool.co.kr/" target="_blank">배스킨 스쿨</a></li>
             <li><a href="http://www.spc.co.kr/" target="_blank">SPC그룹사이트</a></li>
@@ -497,6 +458,28 @@
         <p class="address">Copyright ⓒ 2016 BRKOREA Company. All Rights Reserved.</p>
       </div>
     </footer>
+
+
+        <!-- JS 링크 추가 -->
+        <script type="text/javascript" src="main.js"></script>
+    
+        <script>
+          $(function() {
+            $('.swipe').slick({
+              autoplay: true,
+              autoplaySpeed: 3000,
+            });
+    
+    
+            $('.event-box').slick({
+              dots: true,
+              infinite: true,
+              slidesToShow: 4,
+              slidesToScroll: 4
+              });
+          });
+    
+        </script>
 
   </body>
 </html>
