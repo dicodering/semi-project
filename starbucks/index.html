@@ -18,21 +18,8 @@
     <link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script type="text/javascript" src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    
-    <script>
-      $(function() {
-        $('.slidergroup').slick( { 
-            autoplay: true,
-          autoplaySpeed: 3000,
-
-        });
-      });
-    </script>
-
 
     <title>Starbucks.html</title>
-
-    
 </head>
 
 <body>
@@ -697,7 +684,7 @@
                 </div>
             </div>
         </div>
-        </div>
+    </div>
 
         <!--공지사항------------------>
         <section class="line_notice">
@@ -1101,7 +1088,6 @@
             </div>
             <span class="en">ⓒ 2021 Starbucks Coffee Company. All Rights Reserved.</span>
         </aside>
-
     </footer>
     
     <!--AOS 라이브러리 적용-->
@@ -1109,7 +1095,15 @@
     <script>
         AOS.init();
     </script>
-
+    <script>
+        $(function() {
+          $('.slidergroup').slick( { 
+              autoplay: true,
+            autoplaySpeed: 3000,
+  
+          });
+        });
+      </script>
     
     <script>
 
@@ -1128,7 +1122,6 @@
                 on_prom.style.display = 'none';
 	        }
         }
-
     </script>
 </body>
 </html>
